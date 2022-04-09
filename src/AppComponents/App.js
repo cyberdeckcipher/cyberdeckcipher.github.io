@@ -1,14 +1,14 @@
-import logo from '../Images/logo.svg';
-import AppHeader from './AppHeader';
-import './App.css';
-
-
+import AppHeader from './Header/AppHeader';
+import AppFooter from './Footer/AppFooter';
+import AppContent from './Content/AppContent';
+import styles from '../Styles/App.module.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.App}>
       <AppHeader />
-      <img src={logo} className="App-logo" alt="logo" />
+      <AppContent />
+      <AppFooter />
     </div>
   );
 }
