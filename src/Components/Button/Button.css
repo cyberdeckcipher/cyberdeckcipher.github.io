@@ -1,0 +1,18 @@
+.Button {
+    display: inline-block;
+    justify-self: stretch;
+    min-height: 100%;
+    margin: 3px 0 3px 0;
+    padding: 10px 5px 10px 5px;
+}
+
+.Button :hover {
+    font-weight: bold;
+    border-bottom: 3px solid #6A7367;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.buttonText{
+    color: #3399FF;
+}

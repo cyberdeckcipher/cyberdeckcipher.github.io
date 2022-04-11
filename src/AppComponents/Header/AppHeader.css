@@ -1,0 +1,15 @@
+.AppHeaderMenu{
+    justify-content: flex-end;
+    font-size: large;
+    display: flex;
+    height: 60%;
+    width: 90%;
+  }
+
+ .AppHeaderBreadcrumb{
+    align-self: flex-end;
+    font-size: small;
+    color: #FFDBA3;
+    margin-left: 10px;
+    bottom: 0;
+  }

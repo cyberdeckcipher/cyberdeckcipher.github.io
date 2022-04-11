@@ -1,7 +1,8 @@
 {
     "background": "#1E1E1E",
-    "text":       "#6A7367",
+    "hightlight": "#6A7367",
     "comentary":  "#57A64A",
+    "text":       "#FFFFFF",
     "link":       "#3399FF",
     "appRed":     "#8C2F2F",
     "appYellow":  "#FFDBA3"
