@@ -15,10 +15,12 @@ const buttonType = (params) =>{
     }
 }
 
-export default function Button(params){
+const Button = (params) => {
     return (
         <div className='Button'>
             {buttonType(params)}
         </div>
     )
 }
+
+export default Button;
