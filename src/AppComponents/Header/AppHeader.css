@@ -7,9 +7,10 @@
   }
 
  .AppHeaderBreadcrumb{
+    display: inline-block;
     align-self: flex-end;
     font-size: small;
     color: #FFDBA3;
-    margin-left: 10px;
+    margin: 5px 0 0 10px;
     bottom: 0;
   }

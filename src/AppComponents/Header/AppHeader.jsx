@@ -25,10 +25,9 @@ const AppHeader = () => {
             <div className='AppHeaderMenu'>
                 {RenderButton('Projects')}
                 {RenderButton('Arts')}
-                {RenderButton('Home')}
             </div>
             <div className='AppHeaderBreadcrumb'>
-                <p> ulissesigma {'>'} home {'>'} here </p>
+                <span>Breadcrumbs {'>'} here</span>
             </div>
         </div>
     )
