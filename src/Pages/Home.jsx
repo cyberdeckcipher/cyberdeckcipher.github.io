@@ -4,9 +4,7 @@ import RotatingCube from '../Components/RotatingCube/RotatingCube';
 const Home = () => {
     return (
         <div>
-            <div className='CubeContainer' id='HomeCubeContainer'>
-                <RotatingCube/>
-            </div>
+            <RotatingCube/>
             <div><span>Home page.</span></div>
         </div>
     )
