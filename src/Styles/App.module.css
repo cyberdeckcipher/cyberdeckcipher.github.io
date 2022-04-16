@@ -24,10 +24,6 @@
     min-width: 100%;
     position: fixed;
     background-color: #1E1E1E
-    /* 
-      #1E1E1E; 
-      #6A7367
-    */
   }
 
   .AppHeader {
@@ -42,7 +38,7 @@
     position: absolute;
     min-width: 100%;
     min-height: 88%;
-    background-color: black;
+    background-color: #1E1E1E;
     margin-top: 3px;
   }
   

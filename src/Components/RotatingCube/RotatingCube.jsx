@@ -19,11 +19,16 @@ const GetRotatingCubeStyle = () => {
     }
 };
 
-// const SpeedX = 0.005;
-// const SpeedY = 0.005;
-// const SpeedZ = 0.005;
-var CubeX, CubeY, CubeZ, CubeSize = 0;
-var DeltaTime, LastTime, CubeHeight, CubeWidth = 0;
+const Speed = Point3D(0.005, 0.01, 0.015);
+
+var CubeX      = 0;
+var CubeY      = 0;
+var CubeZ      = 0;
+var CubeSize   = 0;
+var DeltaTime  = 0;
+var LastTime   = 0;
+var CubeHeight = 0;
+var CubeWidth  = 0;
 
 let ctx      = null;
 var Vertices = null;
@@ -36,11 +41,26 @@ const loop = (currentTime) =>{
 
         ctx.fillRect(0,0,CubeWidth,CubeHeight);
 
-        // console.log('fillStyle >>>'+ctx.fillStyle);
-        // console.log('strokeStyle >>>'+ctx.strokeStyle);
-        // console.log('lineWidth >>>'+ctx.lineWidth);
-        // console.log('linecap >>>'+ctx.linecap);
+        let angle = DeltaTime * 0.01 * Speed.x * Math.PI * 2;
+        for (let cubeVertice of Vertices){
+            let dx = cubeVertice.x - CubeX;
+            let dy = cubeVertice.y - CubeY;
+            let nx = dx * Math.cos(angle) - dy * Math.sin(angle);
+            let ny = dx * Math.sin(angle) + dy * Math.cos(angle);
+            cubeVertice.x = nx + CubeX;
+            cubeVertice.y = ny + CubeY;
+        }
 
+        angle = DeltaTime * 0.01 * Speed.y * Math.PI * 2;
+        for (let cubeVertice of Vertices){
+            let dy = cubeVertice.y - CubeY;
+            let dz = cubeVertice.z - CubeZ;
+            let ny = dy * Math.cos(angle) - dz * Math.sin(angle);
+            let nz = dy * Math.sin(angle) + dz * Math.cos(angle);
+            cubeVertice.y = ny + CubeY;
+            cubeVertice.z = nz + CubeZ;
+        }
+        
         for(let edge of Edges){
             ctx.beginPath();
             ctx.moveTo(Vertices[edge[0]].x,Vertices[edge[0]].y);
@@ -48,7 +68,7 @@ const loop = (currentTime) =>{
             ctx.stroke();
         }
     }
-    //requestAnimationFrame(loop);
+    requestAnimationFrame(loop);
 }
 
 const RotatingCube = () => {
@@ -63,16 +83,10 @@ const RotatingCube = () => {
       CubeHeight = canvasEle.height;
       CubeWidth  = canvasEle.width;
 
-      console.log('>>> Width:'+CubeWidth+' Height:'+CubeHeight);
-
       CubeY = CubeHeight/2;
       CubeX = CubeWidth/2;
       CubeZ = 0;
-      CubeSize = CubeWidth / 4;
-
-      
-      console.log("Canvas Co-ordinates: ("+canvasEle.offsetLeft+", "+canvasEle.offsetTop +")");
-      console.log("Cube Co-ordinates: ("+CubeX+", "+CubeY+")");
+      CubeSize = CubeWidth / 6;
 
       Vertices = [
         Point3D(CubeX - CubeSize, CubeY - CubeSize, CubeZ - CubeSize ),
@@ -84,8 +98,9 @@ const RotatingCube = () => {
         Point3D(CubeX + CubeSize, CubeY + CubeSize, CubeZ + CubeSize ),
         Point3D(CubeX - CubeSize, CubeY + CubeSize, CubeZ + CubeSize )
       ];
+
       Edges = [
-        [0,1],[1,2],[2,3],[3,4],
+        [0,1],[1,2],[2,3],[3,0],
         [4,5],[5,6],[6,7],[7,4],
         [0,4],[1,5],[2,6],[3,7]
       ];
