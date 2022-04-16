@@ -78,6 +78,7 @@ const AppHeader = () => {
             <div className='AppHeaderMenu'>
                 {RenderButton('Projects')}
                 {RenderButton('Arts')}
+                {RenderButton('About')}
             </div>
             <RenderBreadcrumbButton/>
         </div>

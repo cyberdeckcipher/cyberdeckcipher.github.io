@@ -1,9 +1,13 @@
 import React from 'react';
+import RotatingCube from '../Components/RotatingCube/RotatingCube';
 
 const Home = () => {
     return (
         <div>
-            <span>Home page.</span>
+            <div className='CubeContainer' id='HomeCubeContainer'>
+                <RotatingCube/>
+            </div>
+            <div><span>Home page.</span></div>
         </div>
     )
 }
