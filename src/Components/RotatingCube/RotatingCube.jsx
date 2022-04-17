@@ -41,7 +41,7 @@ const loop = (currentTime) =>{
 
         ctx.fillRect(0,0,CubeWidth,CubeHeight);
 
-        let angle = DeltaTime * 0.01 * Speed.x * Math.PI * 2;
+        let angle = DeltaTime * 0.001 * Speed.x * Math.PI * 2;
         for (let cubeVertice of Vertices){
             let dx = cubeVertice.x - CubeX;
             let dy = cubeVertice.y - CubeY;
@@ -51,13 +51,23 @@ const loop = (currentTime) =>{
             cubeVertice.y = ny + CubeY;
         }
 
-        angle = DeltaTime * 0.01 * Speed.y * Math.PI * 2;
+        angle = DeltaTime * 0.001 * Speed.y * Math.PI * 2;
         for (let cubeVertice of Vertices){
             let dy = cubeVertice.y - CubeY;
             let dz = cubeVertice.z - CubeZ;
             let ny = dy * Math.cos(angle) - dz * Math.sin(angle);
             let nz = dy * Math.sin(angle) + dz * Math.cos(angle);
             cubeVertice.y = ny + CubeY;
+            cubeVertice.z = nz + CubeZ;
+        }
+
+        angle = DeltaTime * 0.001 * Speed.z * Math.PI * 2;
+        for (let cubeVertice of Vertices){
+            let dx = cubeVertice.x - CubeX;
+            let dz = cubeVertice.z - CubeZ;
+            let nx = dx * Math.cos(angle) - dz * Math.sin(angle);
+            let nz = dx * Math.sin(angle) + dz * Math.cos(angle);
+            cubeVertice.x = nx + CubeX;
             cubeVertice.z = nz + CubeZ;
         }
         
