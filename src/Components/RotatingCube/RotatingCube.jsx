@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import Pallete from '../../Styles/Pallete.json';
-import './RotatingCube.css';
 
 const Point3D = (a,b,c) => {
     return ({
@@ -15,7 +14,7 @@ const GetRotatingCubeStyle = () => {
         display: 'block',
         position: 'absolute',
         width: '50%',
-        height: '50%'
+        height: '99%'
     }
 };
 
