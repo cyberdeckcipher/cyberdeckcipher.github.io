@@ -4,7 +4,7 @@ import styles from '../../Styles/App.module.css';
 const AppFooter = () => {
     return (
         <div className={styles.AppFooter}>
-            <p>Footer</p>
+            <p>I work with people to achieve great things</p>
         </div>
     )
 }

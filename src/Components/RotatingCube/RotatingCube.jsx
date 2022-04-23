@@ -9,12 +9,21 @@ const Point3D = (a,b,c) => {
     })
 };
 
-const GetRotatingCubeStyle = () => {
+const GetRotatingCubeDivStyle = () => {
     return {
         display: 'block',
         position: 'absolute',
         width: '50%',
         height: '99%'
+    }
+};
+
+const GetRotatingCubeStyle = () => {
+    return {
+        display: 'block',
+        position: 'absolute',
+        width: '100%',
+        height: '100%'
     }
 };
 
@@ -124,7 +133,9 @@ const RotatingCube = () => {
     }, []);
 
     return (
-        <canvas style={GetRotatingCubeStyle()} ref={canvas}></canvas>
+        <div style={GetRotatingCubeDivStyle()}>
+            <canvas style={GetRotatingCubeStyle()} ref={canvas} />
+        </div>
     );
 }
 

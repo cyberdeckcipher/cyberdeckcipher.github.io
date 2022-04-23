@@ -1,0 +1,7 @@
+.temp{
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 99%;
+    right: 0;
+}

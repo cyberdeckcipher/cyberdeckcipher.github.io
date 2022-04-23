@@ -1,12 +1,13 @@
 import React from 'react';
 import RotatingCube from '../Components/RotatingCube/RotatingCube';
+import './temp.css';
 
 const Home = () => {
     return (
-        <div>
+        <>
             <RotatingCube/>
-            <div><span>Home page.</span></div>
-        </div>
+            <div className='temp'><span>Home page.</span></div>
+        </>
     )
 }
 
