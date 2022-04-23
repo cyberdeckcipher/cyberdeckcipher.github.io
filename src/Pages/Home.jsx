@@ -1,12 +1,12 @@
 import React from 'react';
 import RotatingCube from '../Components/RotatingCube/RotatingCube';
-import './temp.css';
+import pageStyle from '../Styles/Pages.module.css';
 
 const Home = () => {
     return (
         <>
             <RotatingCube/>
-            <div className='temp'><span>Home page.</span></div>
+            <div className={pageStyle.RightHalf}><span>Home page.</span></div>
         </>
     )
 }
