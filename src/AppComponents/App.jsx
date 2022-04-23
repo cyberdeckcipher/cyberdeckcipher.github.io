@@ -7,6 +7,7 @@ import Home     from '../Pages/Home';
 import Arts     from '../Pages/Arts';
 import Projects from '../Pages/Projects';
 import NotFound from '../Pages/NotFound';
+import WIP from '../Pages/WIP';
 
 const App = () => {
   return (
@@ -15,9 +16,8 @@ const App = () => {
       <div className={styles.AppContainer}>
         <Routes>
           <Route path='/' exact   element={<Home/>} />
-          <Route path='/Home'     element={<Home/>} />
-          <Route path='/Projects' element={<Projects/>} />
-          <Route path='/Arts'     element={<Arts/>} />
+          <Route path='/Projects' element={<WIP/>} />
+          <Route path='/Arts'     element={<WIP/>} />
           
           <Route path='/*'        element={<NotFound/>} />
         </Routes>
