@@ -7,7 +7,7 @@ import Home     from '../Pages/Home';
 // import Arts     from '../Pages/Arts';
 // import Projects from '../Pages/Projects';
 import PageNotFound from '../Pages/PageNotFound';
-import WIP      from '../Pages/WIP';
+import WIP          from '../Pages/WIP';
 
 const App = () => {
   return (

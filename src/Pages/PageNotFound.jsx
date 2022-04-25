@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../Styles/Pages.module.css';
-import SadGuy from '../Images/Robot/SadGuy.gif';
+import SadGuy from '../Images/SadGuy/SadGuy.gif';
 
 const PageNotFound = () => {
     return (
