@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../Styles/Pages.module.css';
-import UnderConstructionGIF from '../Images/Robot/UnderConstructionGIF.gif';
+import UnderConstructionGIF from '../Images/Robot/UnderConstruction.gif';
 
 const WIP = () => {
     return (
