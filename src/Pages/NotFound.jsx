@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../Styles/Pages.module.css';
-import NotFoundRobot from '../Images/Robot/NotFoundRobot.png';
+import NotFoundRobot from '../Images/Robot/NotFoundRobot.gif';
 
 const NotFound = () => {
     return (

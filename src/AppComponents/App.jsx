@@ -15,12 +15,11 @@ const App = () => {
       <AppHeader />
       <div className={styles.AppContainer}>
         <Routes>
-          <Route path='/' exact   element={<Home/>} />
-          <Route path='/Projects' element={<WIP/>} />
-          <Route path='/Arts'     element={<WIP/>} />
-          <Route path='/About'     element={<WIP/>} />
-          
-          <Route path='/*'        element={<NotFound/>} />
+          <Route path='/'         exact element={<Home/>}     />
+          <Route path='/Projects' exact element={<WIP/>}      />
+          <Route path='/Arts'     exact element={<WIP/>}      />
+          <Route path='/About'    exact element={<WIP/>}      />
+          <Route path='/*'              element={<NotFound/>} />
         </Routes>
       </div>
       <AppFooter />
