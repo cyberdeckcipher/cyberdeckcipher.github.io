@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from '../Styles/Pages.module.css';
-import NotFound from '../Images/Robot/NotFound.gif';
+import SadGuy from '../Images/Robot/SadGuy.gif';
 
 const PageNotFound = () => {
     return (
         <div className={styles.SingleColumn}>
-            <img src={NotFound} alt='404 Page not found' />
+            <img src={SadGuy} alt='404 Page not found' />
             <h1> 404 Page not found </h1>
         </div>
     )
