@@ -6,33 +6,48 @@
     margin: 0 0 0 0;
     left: 0;
     top: 0;
-}
+  }
 
 h1, h2, h3, h4, p, span {
     margin: 0 0 0 0;
     color: #FFFFFF;
-}
+  }
 
 a {
     margin: 0 0 0 0;
     color: #3399FF;
+  }
+
+.Button {
+    display: inline-block;
+    justify-self: stretch;
+    min-height: 100%;
+    margin: 3px 0 3px 0;
+    padding: 10px 5px 10px 5px;
 }
 
+.Button :hover {
+    font-weight: bold;
+    border-bottom: 3px solid #6A7367;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+  
 .App {
     display: block;
     min-height: 100%;
     min-width: 100%;
     position: fixed;
     background-color: #1E1E1E
-}
+  }
 
 .AppHeader {
     display: block;
     position: relative;
     box-shadow: 0px 1px 3px #6A7367;
     height: 50px;
-}
-
+  }
+  
 .AppContainer{
     display: flex;
     position: absolute;
@@ -40,8 +55,8 @@ a {
     min-height: 88%;
     background-color: #1E1E1E;
     margin-top: 3px;
-}
-
+  }
+  
 .AppFooter{
     display: flex;
     position: absolute;
@@ -50,8 +65,34 @@ a {
     height: 5%;
     box-shadow: 1px 0px 0px 1px gray;
     bottom: 0;
-}
+  }
 
 .AppFooter p {
     font-size: medium;
+  }
+
+.SingleColumn {
+    display: flex;
+    width: 100%;
+    height: 99%;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
 }
+
+.AppHeaderMenu{
+    justify-content: flex-end;
+    font-size: large;
+    display: flex;
+    height: 60%;
+    width: 90%;
+  }
+  
+.AppHeaderBreadcrumb{
+    display: inline-block;
+    align-self: flex-end;
+    font-size: small;
+    color: #FFDBA3;
+    margin: 5px 0 0 10px;
+    bottom: 0;
+  }
