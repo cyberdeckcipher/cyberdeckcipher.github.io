@@ -1,4 +1,4 @@
-#root, body {
+body {
     font-family: 'Consolas', 'Courier', 'verdana', 'sans-serif';
     position: absolute;
     min-height: 100%;
@@ -17,21 +17,6 @@ a {
     margin: 0 0 0 0;
     color: #3399FF;
   }
-
-.Button {
-    display: inline-block;
-    justify-self: stretch;
-    min-height: 100%;
-    margin: 3px 0 3px 0;
-    padding: 10px 5px 10px 5px;
-}
-
-.Button :hover {
-    font-weight: bold;
-    border-bottom: 3px solid #6A7367;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
-}
   
 .App {
     display: block;
@@ -80,15 +65,30 @@ a {
     flex-direction: column;
 }
 
-.AppHeaderMenu{
+.AppHeaderMenu {
     justify-content: flex-end;
     font-size: large;
     display: flex;
     height: 60%;
     width: 90%;
   }
+
+.Button {
+    display: inline-block;
+    position: relative;
+    min-height: 85%;
+    margin: 3px 0px 0px 0px;
+    padding: 10px 5px 0px 5px;
+}
+
+.Button:hover {
+    font-weight: bold;
+    border-bottom: 3px solid #6A7367;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
   
-.AppHeaderBreadcrumb{
+.AppHeaderBreadcrumb {
     display: inline-block;
     align-self: flex-end;
     font-size: small;
