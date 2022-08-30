@@ -1,2 +1,0 @@
-Domain: ulissessigma.github.io
-Token: ba8922e699a9dc4aaef331e7349fc266d501dd45430519476ce012b3d6ae39e0
