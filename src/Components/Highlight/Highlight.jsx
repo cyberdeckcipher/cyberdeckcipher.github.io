@@ -1,14 +1,22 @@
-import Card    from 'react-bootstrap/Card';
-import Pallete from '../../Styles/Pallete.json';
+import Card                from 'react-bootstrap/Card';
+import Pallete             from '../../Styles/Pallete.json';
+import useWindowDimensions from '../Utils/useWindowDimensions';
+import truncateString      from '../Utils/truncateString';
 
 const Highlight = (params) => {
+    const { height, width } = useWindowDimensions();
+    const bodyText          = truncateString(params.text, 100);
     return (
-        <Card style={{ width: '18rem' , backgroundColor: Pallete.background }}>
+        <Card style={{ maxWidth: width/2.5, backgroundColor: Pallete.hightlight}}>
             <Card.Img variant="top" src={params.imageURL} />
             <Card.Body>
-                <Card.Title style={{ color: Pallete.hightlight }}>{params.title}</Card.Title>
+                <Card.Title style={{ color: Pallete.text }}>{params.title}</Card.Title>
                 <Card.Text>
-                    {params.text}
+                    width: {width}
+                    <br/>
+                    height: {height}
+                    <br/>
+                    {bodyText}
                 </Card.Text>
             </Card.Body>
         </Card>

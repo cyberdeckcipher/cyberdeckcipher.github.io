@@ -53,8 +53,10 @@ const loop = (currentTime) =>{
         for (let cubeVertice of Vertices){
             let dx = cubeVertice.x - CubeX;
             let dy = cubeVertice.y - CubeY;
+            
             let nx = dx * Math.cos(angle) - dy * Math.sin(angle);
             let ny = dx * Math.sin(angle) + dy * Math.cos(angle);
+
             cubeVertice.x = nx + CubeX;
             cubeVertice.y = ny + CubeY;
         }
@@ -63,18 +65,23 @@ const loop = (currentTime) =>{
         for (let cubeVertice of Vertices){
             let dy = cubeVertice.y - CubeY;
             let dz = cubeVertice.z - CubeZ;
+
             let ny = dy * Math.cos(angle) - dz * Math.sin(angle);
             let nz = dy * Math.sin(angle) + dz * Math.cos(angle);
+
             cubeVertice.y = ny + CubeY;
             cubeVertice.z = nz + CubeZ;
         }
 
         angle = DeltaTime * 0.001 * Speed.z * Math.PI * 2;
         for (let cubeVertice of Vertices){
+
             let dx = cubeVertice.x - CubeX;
             let dz = cubeVertice.z - CubeZ;
+
             let nx = dx * Math.cos(angle) - dz * Math.sin(angle);
             let nz = dx * Math.sin(angle) + dz * Math.cos(angle);
+
             cubeVertice.x = nx + CubeX;
             cubeVertice.z = nz + CubeZ;
         }
@@ -94,16 +101,16 @@ const RotatingCube = () => {
     if(DeltaTime == null) DeltaTime = 0;
    
     useEffect(() => {
-      const canvasEle = canvas.current;
+      const canvasEle  = canvas.current;
       canvasEle.width  = canvasEle.clientWidth;
       canvasEle.height = canvasEle.clientHeight;
 
       CubeHeight = canvasEle.height;
       CubeWidth  = canvasEle.width;
 
-      CubeY = CubeHeight/2;
-      CubeX = CubeWidth/2;
-      CubeZ = 0;
+      CubeY    = CubeHeight/2;
+      CubeX    = CubeWidth/2;
+      CubeZ    = 0;
       CubeSize = CubeWidth / 6;
 
       Vertices = [
@@ -123,11 +130,11 @@ const RotatingCube = () => {
         [0,4],[1,5],[2,6],[3,7]
       ];
 
-      ctx = canvasEle.getContext("2d");
-      ctx.fillStyle = Pallete.background;
+      ctx             = canvasEle.getContext("2d");
+      ctx.fillStyle   = Pallete.background;
       ctx.strokeStyle = Pallete.appYellow;
-      ctx.lineWidth = CubeWidth/100;
-      ctx.linecap = 'round';
+      ctx.lineWidth   = CubeWidth/100;
+      ctx.linecap     = 'round';
       
       requestAnimationFrame(loop);
     }, []);

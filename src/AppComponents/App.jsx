@@ -16,12 +16,12 @@ const App = () => {
       <AppHeader />
       <div className={styles.AppContainer}>
         <Routes>
-          <Route path='/'         exact element={<Home/>}     />
-          <Route path='/Projects' exact element={<Projects/>}      />
-          <Route path='/Arts'     exact element={<WIP/>}      />
-          <Route path='/About'    exact element={<WIP/>}      />
+          <Route path='/'             exact element={<Home/>} />
+          <Route path='/Projects'     exact element={<Projects/>} />
+          <Route path='/Arts'         exact element={<WIP/>} />
+          <Route path='/About'        exact element={<WIP/>} />
           <Route path='/PageNotFound' exact element={<PageNotFound/>} />
-          <Route path='/*'              element={<PageNotFound/>} />
+          <Route path='/*'                  element={<PageNotFound/>} />
         </Routes>
       </div>
       <AppFooter />

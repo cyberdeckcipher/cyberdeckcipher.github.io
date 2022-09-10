@@ -29,3 +29,9 @@
     width: 30%;
     height: 30%;
 }
+
+.RowOfObjects {
+    display: inline;
+    align-items: center;
+    justify-items: left;
+}
